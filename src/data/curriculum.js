@@ -13,6 +13,11 @@ export const SPECIALIZATIONS = [
   { id: "ISE", label: "Information Systems Engineering" },
 ];
 
+export const SYLLABI = [
+  { id: "OLD", label: "Old Syllabus" },
+  { id: "NEW", label: "New Syllabus" },
+];
+
 export const curriculumData = {
   // ─────────────────────────────────────────────────────────────────
   // SOFTWARE ENGINEERING
@@ -1867,6 +1872,471 @@ export const curriculumData = {
   },
 };
 
+// ─────────────────────────────────────────────────────────────────────────────
+// NEW SYLLABUS CURRICULUM DATA (mock — replace with real data when available)
+// ─────────────────────────────────────────────────────────────────────────────
+export const newCurriculumData = {
+  // ─── SOFTWARE ENGINEERING (New Syllabus) ────────────────────────────────
+  SE: {
+    Y1S1: [
+      { id: "NSE1010", name: "Fundamentals of Programming", credits: 4, type: "compulsory" },
+      { id: "NSE1020", name: "Computer Architecture & Organisation", credits: 4, type: "compulsory" },
+      { id: "NSE1030", name: "Discrete Mathematics", credits: 4, type: "compulsory" },
+      { id: "NSE1040", name: "Professional Communication", credits: 3, type: "compulsory" },
+    ],
+    Y1S2: [
+      { id: "NSE1050", name: "Object-Oriented Programming", credits: 4, type: "compulsory" },
+      { id: "NSE1060", name: "Web Application Development", credits: 4, type: "compulsory" },
+      { id: "NSE1070", name: "Database Fundamentals", credits: 4, type: "compulsory" },
+      { id: "NSE1080", name: "Linear Algebra for Computing", credits: 3, type: "compulsory" },
+    ],
+    Y2S1: [
+      { id: "NSE2010", name: "Software Design Patterns", credits: 4, type: "compulsory" },
+      { id: "NSE2020", name: "Agile Software Engineering", credits: 4, type: "compulsory" },
+      { id: "NSE2030", name: "Advanced Database Systems", credits: 4, type: "compulsory" },
+      { id: "NSE2040", name: "Computer Networks & Security", credits: 4, type: "compulsory" },
+    ],
+    Y2S2: [
+      { id: "NSE2050", name: "Full-Stack Development", credits: 4, type: "compulsory" },
+      { id: "NSE2060", name: "Data Structures & Algorithm Analysis", credits: 4, type: "compulsory" },
+      { id: "NSE2070", name: "Software Testing & Quality Assurance", credits: 3, type: "compulsory" },
+      { id: "NSE2080", name: "Cloud Computing Fundamentals", credits: 3, type: "compulsory" },
+      { id: "NSE2090", name: "Professional Development Seminar", credits: 1, type: "compulsory" },
+    ],
+    Y3S1: [
+      { id: "NSE3010", name: "Microservices & API Design", credits: 4, type: "compulsory" },
+      { id: "NSE3020", name: "DevOps & Continuous Delivery", credits: 4, type: "compulsory" },
+      { id: "NSE3030", name: "Secure Software Engineering", credits: 4, type: "compulsory" },
+      { id: "NSE3040", name: "Artificial Intelligence for SE", credits: 4, type: "compulsory" },
+      { id: "NSE3050", name: "Employability Skills Seminar", credits: 1, type: "compulsory" },
+    ],
+    Y3S2: [
+      { id: "NSE3060", name: "Scalable Software Architecture", credits: 4, type: "compulsory" },
+      { id: "NSE3070", name: "Human-Computer Interaction", credits: 3, type: "compulsory" },
+      { id: "NSE3080", name: "Project Management for Engineers", credits: 3, type: "compulsory" },
+      { id: "NSE3090", name: "Industry Internship", credits: 8, type: "compulsory" },
+    ],
+    Y4S1: {
+      compulsory: [
+        { id: "NSE4010", name: "Research Project", credits: 16, type: "compulsory" },
+        { id: "NSE4020", name: "Emerging Trends in Software Engineering", credits: 2, type: "compulsory" },
+      ],
+      electivesPool: [
+        { id: "NSE4E10", name: "Machine Learning Engineering", credits: 4, type: "elective" },
+        { id: "NSE4E20", name: "Blockchain Application Development", credits: 4, type: "elective" },
+        { id: "NSE4E30", name: "Embedded & IoT Systems", credits: 4, type: "elective" },
+        { id: "NSE4E40", name: "Natural Language Processing", credits: 4, type: "elective" },
+        { id: "NSE4E50", name: "Game Engine Development", credits: 4, type: "elective" },
+      ],
+      requiredElectivesCount: 2,
+    },
+    Y4S2: {
+      compulsory: [
+        { id: "NSE4030", name: "Enterprise Software Development", credits: 4, type: "compulsory" },
+        { id: "NSE4040", name: "Software Product Management", credits: 4, type: "compulsory" },
+      ],
+      electivesPool: [],
+      requiredElectivesCount: 0,
+    },
+  },
+
+  // ─── INFORMATION TECHNOLOGY (New Syllabus) ──────────────────────────────
+  IT: {
+    Y1S1: [
+      { id: "NIT1010", name: "Introduction to Computing", credits: 4, type: "compulsory" },
+      { id: "NIT1020", name: "Digital Systems", credits: 4, type: "compulsory" },
+      { id: "NIT1030", name: "Computational Mathematics", credits: 4, type: "compulsory" },
+      { id: "NIT1040", name: "Academic English", credits: 3, type: "compulsory" },
+    ],
+    Y1S2: [
+      { id: "NIT1050", name: "Programming with Python", credits: 4, type: "compulsory" },
+      { id: "NIT1060", name: "Web Technologies", credits: 4, type: "compulsory" },
+      { id: "NIT1070", name: "Fundamentals of Databases", credits: 4, type: "compulsory" },
+      { id: "NIT1080", name: "IT Systems & Infrastructure", credits: 3, type: "compulsory" },
+    ],
+    Y2S1: [
+      { id: "NIT2010", name: "Object Oriented Analysis & Design", credits: 4, type: "compulsory" },
+      { id: "NIT2020", name: "Networking Essentials", credits: 4, type: "compulsory" },
+      { id: "NIT2030", name: "Database Administration", credits: 4, type: "compulsory" },
+      { id: "NIT2040", name: "Systems Analysis & Design", credits: 4, type: "compulsory" },
+    ],
+    Y2S2: [
+      { id: "NIT2050", name: "Mobile & Cloud Development", credits: 4, type: "compulsory" },
+      { id: "NIT2060", name: "Cybersecurity Essentials", credits: 4, type: "compulsory" },
+      { id: "NIT2070", name: "IT Project Management", credits: 3, type: "compulsory" },
+      { id: "NIT2080", name: "Professional Practice", credits: 2, type: "compulsory" },
+      { id: "NIT2090", name: "Employability Seminar", credits: 1, type: "compulsory" },
+    ],
+    Y3S1: [
+      { id: "NIT3010", name: "Enterprise Architecture", credits: 4, type: "compulsory" },
+      { id: "NIT3020", name: "Big Data Technologies", credits: 4, type: "compulsory" },
+      { id: "NIT3030", name: "IT Service Management", credits: 4, type: "compulsory" },
+      { id: "NIT3040", name: "DevOps Practices", credits: 4, type: "compulsory" },
+      { id: "NIT3050", name: "Employability Skills Seminar", credits: 1, type: "compulsory" },
+    ],
+    Y3S2: [
+      { id: "NIT3060", name: "Digital Transformation Strategy", credits: 4, type: "compulsory" },
+      { id: "NIT3070", name: "Information Security Management", credits: 4, type: "compulsory" },
+      { id: "NIT3080", name: "Business Intelligence & Analytics", credits: 4, type: "compulsory" },
+      { id: "NIT3090", name: "Industry Internship", credits: 8, type: "compulsory" },
+    ],
+    Y4S1: {
+      compulsory: [
+        { id: "NIT4010", name: "Research Project", credits: 16, type: "compulsory" },
+        { id: "NIT4020", name: "Modern IT Trends", credits: 4, type: "compulsory" },
+      ],
+      electivesPool: [
+        { id: "NIT4E10", name: "Internet of Things", credits: 4, type: "elective" },
+        { id: "NIT4E20", name: "Artificial Intelligence Applications", credits: 4, type: "elective" },
+        { id: "NIT4E30", name: "Cloud & Edge Computing", credits: 4, type: "elective" },
+        { id: "NIT4E40", name: "Software Quality Engineering", credits: 4, type: "elective" },
+        { id: "NIT4E50", name: "Digital Entrepreneurship", credits: 4, type: "elective" },
+      ],
+      requiredElectivesCount: 3,
+    },
+    Y4S2: {
+      compulsory: [
+        { id: "NIT4030", name: "Preparation for the Professional World", credits: 2, type: "compulsory" },
+      ],
+      electivesPool: [
+        { id: "NIT4E60", name: "Knowledge Engineering", credits: 4, type: "elective" },
+        { id: "NIT4E70", name: "Advanced Machine Learning", credits: 4, type: "elective" },
+        { id: "NIT4E80", name: "Cyber Threat Intelligence", credits: 4, type: "elective" },
+      ],
+      requiredElectivesCount: 0,
+    },
+  },
+
+  // ─── DATA SCIENCE (New Syllabus) ────────────────────────────────────────
+  DS: {
+    Y1S1: [
+      { id: "NDS1010", name: "Programming for Data Science", credits: 4, type: "compulsory" },
+      { id: "NDS1020", name: "Digital Systems & Architecture", credits: 4, type: "compulsory" },
+      { id: "NDS1030", name: "Calculus & Linear Algebra", credits: 4, type: "compulsory" },
+      { id: "NDS1040", name: "Professional Communication", credits: 3, type: "compulsory" },
+    ],
+    Y1S2: [
+      { id: "NDS1050", name: "Python for Analytics", credits: 4, type: "compulsory" },
+      { id: "NDS1060", name: "Probability & Statistical Inference", credits: 4, type: "compulsory" },
+      { id: "NDS1070", name: "Data Management Fundamentals", credits: 4, type: "compulsory" },
+      { id: "NDS1080", name: "Introduction to Data Science", credits: 3, type: "compulsory" },
+    ],
+    Y2S1: [
+      { id: "NDS2010", name: "Machine Learning Fundamentals", credits: 4, type: "compulsory" },
+      { id: "NDS2020", name: "Big Data Platforms", credits: 4, type: "compulsory" },
+      { id: "NDS2030", name: "Advanced Statistical Modelling", credits: 4, type: "compulsory" },
+      { id: "NDS2040", name: "Data Warehousing & BI", credits: 4, type: "compulsory" },
+    ],
+    Y2S2: [
+      { id: "NDS2050", name: "Deep Learning", credits: 4, type: "compulsory" },
+      { id: "NDS2060", name: "Data Mining & Pattern Recognition", credits: 4, type: "compulsory" },
+      { id: "NDS2070", name: "Data Visualisation", credits: 3, type: "compulsory" },
+      { id: "NDS2080", name: "Professional Skills", credits: 2, type: "compulsory" },
+      { id: "NDS2090", name: "Employability Seminar", credits: 1, type: "compulsory" },
+    ],
+    Y3S1: [
+      { id: "NDS3010", name: "Natural Language Processing", credits: 4, type: "compulsory" },
+      { id: "NDS3020", name: "Computer Vision", credits: 4, type: "compulsory" },
+      { id: "NDS3030", name: "Cloud Data Engineering", credits: 4, type: "compulsory" },
+      { id: "NDS3040", name: "Time Series & Forecasting", credits: 4, type: "compulsory" },
+      { id: "NDS3050", name: "Employability Skills Seminar", credits: 1, type: "compulsory" },
+    ],
+    Y3S2: [
+      { id: "NDS3060", name: "Responsible AI & Ethics", credits: 3, type: "compulsory" },
+      { id: "NDS3070", name: "MLOps & Model Deployment", credits: 4, type: "compulsory" },
+      { id: "NDS3080", name: "Causal Inference & Experimentation", credits: 4, type: "compulsory" },
+      { id: "NDS3090", name: "Industry Internship", credits: 8, type: "compulsory" },
+    ],
+    Y4S1: {
+      compulsory: [
+        { id: "NDS4010", name: "Research Project", credits: 16, type: "compulsory" },
+        { id: "NDS4020", name: "Preparation for the Professional World", credits: 2, type: "compulsory" },
+        { id: "NDS4030", name: "Advanced Database & Storage Systems", credits: 4, type: "compulsory" },
+      ],
+      electivesPool: [],
+      requiredElectivesCount: 0,
+    },
+    Y4S2: {
+      compulsory: [
+        { id: "NDS4040", name: "IoT & Streaming Analytics", credits: 4, type: "compulsory" },
+        { id: "NDS4050", name: "Visual Analytics & UX Design", credits: 4, type: "compulsory" },
+        { id: "NDS4060", name: "Information Security for Data Science", credits: 4, type: "compulsory" },
+      ],
+      electivesPool: [],
+      requiredElectivesCount: 0,
+    },
+  },
+
+  // ─── INTERACTIVE MEDIA (New Syllabus) ───────────────────────────────────
+  IM: {
+    Y1S1: [
+      { id: "NIM1010", name: "Foundations of Digital Media", credits: 4, type: "compulsory" },
+      { id: "NIM1020", name: "Introduction to Programming", credits: 4, type: "compulsory" },
+      { id: "NIM1030", name: "Graphic Design Principles", credits: 4, type: "compulsory" },
+      { id: "NIM1040", name: "Professional Communication", credits: 3, type: "compulsory" },
+    ],
+    Y1S2: [
+      { id: "NIM1050", name: "Web Design & Development", credits: 4, type: "compulsory" },
+      { id: "NIM1060", name: "Digital Photography & Imaging", credits: 4, type: "compulsory" },
+      { id: "NIM1070", name: "UX Design Fundamentals", credits: 4, type: "compulsory" },
+      { id: "NIM1080", name: "Creative Computing", credits: 3, type: "compulsory" },
+    ],
+    Y2S1: [
+      { id: "NIM2010", name: "Motion Graphics & Animation", credits: 4, type: "compulsory" },
+      { id: "NIM2020", name: "Interactive Application Development", credits: 4, type: "compulsory" },
+      { id: "NIM2030", name: "Audio Design & Production", credits: 4, type: "compulsory" },
+      { id: "NIM2040", name: "User Research Methods", credits: 4, type: "compulsory" },
+    ],
+    Y2S2: [
+      { id: "NIM2050", name: "3D Modelling & Rendering", credits: 4, type: "compulsory" },
+      { id: "NIM2060", name: "Video Production & Post-Production", credits: 4, type: "compulsory" },
+      { id: "NIM2070", name: "Digital Marketing & Social Media", credits: 3, type: "compulsory" },
+      { id: "NIM2080", name: "Professional Practice", credits: 2, type: "compulsory" },
+      { id: "NIM2090", name: "Employability Seminar", credits: 1, type: "compulsory" },
+    ],
+    Y3S1: [
+      { id: "NIM3010", name: "Extended Reality (XR) Development", credits: 4, type: "compulsory" },
+      { id: "NIM3020", name: "Game Design & Development", credits: 4, type: "compulsory" },
+      { id: "NIM3030", name: "Interaction Design", credits: 4, type: "compulsory" },
+      { id: "NIM3040", name: "Creative Coding & Generative Art", credits: 3, type: "compulsory" },
+      { id: "NIM3050", name: "Employability Skills Seminar", credits: 1, type: "compulsory" },
+    ],
+    Y3S2: [
+      { id: "NIM3060", name: "Immersive Media Production", credits: 4, type: "compulsory" },
+      { id: "NIM3070", name: "Brand & Identity Design", credits: 4, type: "compulsory" },
+      { id: "NIM3080", name: "Media Project Management", credits: 3, type: "compulsory" },
+      { id: "NIM3090", name: "Industry Internship", credits: 8, type: "compulsory" },
+    ],
+    Y4S1: {
+      compulsory: [
+        { id: "NIM4010", name: "Research Project", credits: 16, type: "compulsory" },
+        { id: "NIM4020", name: "Preparation for the Professional World", credits: 2, type: "compulsory" },
+        { id: "NIM4030", name: "Advanced Game Development", credits: 4, type: "compulsory" },
+      ],
+      electivesPool: [],
+      requiredElectivesCount: 0,
+    },
+    Y4S2: {
+      compulsory: [
+        { id: "NIM4040", name: "AI in Creative Media", credits: 4, type: "compulsory" },
+        { id: "NIM4050", name: "Trends in Digital Entertainment", credits: 4, type: "compulsory" },
+        { id: "NIM4060", name: "Media Entrepreneurship", credits: 4, type: "compulsory" },
+      ],
+      electivesPool: [],
+      requiredElectivesCount: 0,
+    },
+  },
+
+  // ─── COMPUTER SYSTEMS & NETWORK ENGINEERING (New Syllabus) ─────────────
+  CSNE: {
+    Y1S1: [
+      { id: "NCN1010", name: "Introduction to Computing", credits: 4, type: "compulsory" },
+      { id: "NCN1020", name: "Digital Electronics & Logic Design", credits: 4, type: "compulsory" },
+      { id: "NCN1030", name: "Engineering Mathematics I", credits: 4, type: "compulsory" },
+      { id: "NCN1040", name: "Technical Communication", credits: 3, type: "compulsory" },
+    ],
+    Y1S2: [
+      { id: "NCN1050", name: "Computer Organisation & Architecture", credits: 4, type: "compulsory" },
+      { id: "NCN1060", name: "Network Fundamentals", credits: 4, type: "compulsory" },
+      { id: "NCN1070", name: "Engineering Mathematics II", credits: 3, type: "compulsory" },
+      { id: "NCN1080", name: "Object Oriented Programming", credits: 4, type: "compulsory" },
+    ],
+    Y2S1: [
+      { id: "NCN2010", name: "Routing & Switching Technologies", credits: 4, type: "compulsory" },
+      { id: "NCN2020", name: "Analogue & RF Electronics", credits: 3, type: "compulsory" },
+      { id: "NCN2030", name: "Database Systems Administration", credits: 4, type: "compulsory" },
+      { id: "NCN2040", name: "Operating Systems", credits: 4, type: "compulsory" },
+      { id: "NCN2050", name: "Statistics for Engineers", credits: 3, type: "compulsory" },
+    ],
+    Y2S2: [
+      { id: "NCN2060", name: "Advanced Internetworking", credits: 4, type: "compulsory" },
+      { id: "NCN2070", name: "Embedded & IoT Systems", credits: 4, type: "compulsory" },
+      { id: "NCN2080", name: "Computer Systems Administration", credits: 4, type: "compulsory" },
+      { id: "NCN2090", name: "Professional Engineering Practice", credits: 4, type: "compulsory" },
+    ],
+    Y3S1: [
+      { id: "NCN3010", name: "Software Defined Networking", credits: 4, type: "compulsory" },
+      { id: "NCN3020", name: "Wireless & Mobile Networks", credits: 4, type: "compulsory" },
+      { id: "NCN3030", name: "Network Security Engineering", credits: 4, type: "compulsory" },
+      { id: "NCN3040", name: "Cloud Infrastructure", credits: 4, type: "compulsory" },
+      { id: "NCN3050", name: "Employability Skills Seminar", credits: 1, type: "compulsory" },
+    ],
+    Y3S2: [
+      { id: "NCN3060", name: "Wide Area Network Technologies", credits: 4, type: "compulsory" },
+      { id: "NCN3070", name: "Network Technology Project", credits: 4, type: "compulsory" },
+      { id: "NCN3080", name: "Business Management for Engineers", credits: 3, type: "compulsory" },
+      { id: "NCN3090", name: "Industry Internship", credits: 8, type: "compulsory" },
+    ],
+    Y4S1: {
+      compulsory: [
+        { id: "NCN4010", name: "Research Project", credits: 16, type: "compulsory" },
+        { id: "NCN4020", name: "Preparation for the Professional World", credits: 2, type: "compulsory" },
+      ],
+      electivesPool: [
+        { id: "NCN4E10", name: "Network Automation & Orchestration", credits: 4, type: "elective" },
+        { id: "NCN4E20", name: "Information Security Management", credits: 4, type: "elective" },
+        { id: "NCN4E30", name: "Robotics & Intelligent Systems", credits: 4, type: "elective" },
+        { id: "NCN4E40", name: "5G & Next-Gen Networks", credits: 4, type: "elective" },
+        { id: "NCN4E50", name: "Virtualisation & Containerisation", credits: 4, type: "elective" },
+      ],
+      requiredElectivesCount: 4,
+    },
+    Y4S2: {
+      compulsory: [],
+      electivesPool: [
+        { id: "NCN4E60", name: "Parallel & Distributed Computing", credits: 4, type: "elective" },
+        { id: "NCN4E70", name: "Internet of Things at Scale", credits: 4, type: "elective" },
+        { id: "NCN4E80", name: "Enterprise Network Design", credits: 4, type: "elective" },
+      ],
+      requiredElectivesCount: 0,
+    },
+  },
+
+  // ─── CYBER SECURITY (New Syllabus) ──────────────────────────────────────
+  CYBSEC: {
+    Y1S1: [
+      { id: "NCS1010", name: "Introduction to Cyber Security", credits: 4, type: "compulsory" },
+      { id: "NCS1020", name: "Computer Systems & Architecture", credits: 4, type: "compulsory" },
+      { id: "NCS1030", name: "Discrete Mathematics", credits: 4, type: "compulsory" },
+      { id: "NCS1040", name: "Professional Communication", credits: 3, type: "compulsory" },
+    ],
+    Y1S2: [
+      { id: "NCS1050", name: "Programming for Security", credits: 4, type: "compulsory" },
+      { id: "NCS1060", name: "Network Fundamentals", credits: 4, type: "compulsory" },
+      { id: "NCS1070", name: "Operating Systems Security", credits: 4, type: "compulsory" },
+      { id: "NCS1080", name: "Web Security Essentials", credits: 3, type: "compulsory" },
+    ],
+    Y2S1: [
+      { id: "NCS2010", name: "Applied Cryptography", credits: 4, type: "compulsory" },
+      { id: "NCS2020", name: "Network Security Engineering", credits: 4, type: "compulsory" },
+      { id: "NCS2030", name: "Secure Software Development", credits: 4, type: "compulsory" },
+      { id: "NCS2040", name: "Digital Forensics", credits: 4, type: "compulsory" },
+    ],
+    Y2S2: [
+      { id: "NCS2050", name: "Ethical Hacking & Penetration Testing", credits: 4, type: "compulsory" },
+      { id: "NCS2060", name: "Information Assurance", credits: 4, type: "compulsory" },
+      { id: "NCS2070", name: "Foundations of Algorithms", credits: 4, type: "compulsory" },
+      { id: "NCS2080", name: "Professional Skills", credits: 2, type: "compulsory" },
+      { id: "NCS2090", name: "Employability Seminar", credits: 1, type: "compulsory" },
+    ],
+    Y3S1: [
+      { id: "NCS3010", name: "Cloud Security", credits: 4, type: "compulsory" },
+      { id: "NCS3020", name: "Mobile & IoT Security", credits: 4, type: "compulsory" },
+      { id: "NCS3030", name: "Threat Intelligence & Incident Response", credits: 4, type: "compulsory" },
+      { id: "NCS3040", name: "Security Risk Management", credits: 2, type: "compulsory" },
+      { id: "NCS3050", name: "Data & AI Security", credits: 4, type: "compulsory" },
+      { id: "NCS3060", name: "Employability Skills Seminar", credits: 1, type: "compulsory" },
+    ],
+    Y3S2: [
+      { id: "NCS3070", name: "Cyber Security Policy & Governance", credits: 2, type: "compulsory" },
+      { id: "NCS3080", name: "Advanced Cryptographic Systems", credits: 4, type: "compulsory" },
+      { id: "NCS3090", name: "Cyber Security Project", credits: 4, type: "compulsory" },
+      { id: "NCS3100", name: "Enterprise Security Standards", credits: 2, type: "compulsory" },
+      { id: "NCS3110", name: "Industry Internship", credits: 8, type: "compulsory" },
+    ],
+    Y4S1: {
+      compulsory: [
+        { id: "NCS4010", name: "Research Project", credits: 16, type: "compulsory" },
+        { id: "NCS4020", name: "Preparation for the Professional World", credits: 2, type: "compulsory" },
+      ],
+      electivesPool: [
+        { id: "NCS4E10", name: "Offensive Security & Red Teaming", credits: 4, type: "elective" },
+        { id: "NCS4E20", name: "Secure Software Engineering", credits: 4, type: "elective" },
+        { id: "NCS4E30", name: "ML for Cyber Security", credits: 4, type: "elective" },
+        { id: "NCS4E40", name: "Security Economics & Law", credits: 4, type: "elective" },
+      ],
+      requiredElectivesCount: 4,
+    },
+    Y4S2: {
+      compulsory: [],
+      electivesPool: [
+        { id: "NCS4E50", name: "Information Warfare", credits: 4, type: "elective" },
+        { id: "NCS4E60", name: "Hardware & Firmware Security", credits: 4, type: "elective" },
+        { id: "NCS4E70", name: "Cyber Forensics & Evidence", credits: 4, type: "elective" },
+        { id: "NCS4E80", name: "Governance & Cyber Law Clinic", credits: 4, type: "elective" },
+      ],
+      requiredElectivesCount: 0,
+    },
+  },
+
+  // ─── INFORMATION SYSTEMS ENGINEERING (New Syllabus) ─────────────────────
+  ISE: {
+    Y1S1: [
+      { id: "NIS1010", name: "Introduction to Information Systems", credits: 4, type: "compulsory" },
+      { id: "NIS1020", name: "Computing Fundamentals", credits: 4, type: "compulsory" },
+      { id: "NIS1030", name: "Business Mathematics", credits: 4, type: "compulsory" },
+      { id: "NIS1040", name: "Professional Communication", credits: 3, type: "compulsory" },
+    ],
+    Y1S2: [
+      { id: "NIS1050", name: "Programming for IS", credits: 4, type: "compulsory" },
+      { id: "NIS1060", name: "Web Application Development", credits: 4, type: "compulsory" },
+      { id: "NIS1070", name: "Database Design & Development", credits: 4, type: "compulsory" },
+      { id: "NIS1080", name: "IS Infrastructure", credits: 3, type: "compulsory" },
+    ],
+    Y2S1: [
+      { id: "NIS2010", name: "Database Management Systems", credits: 4, type: "compulsory" },
+      { id: "NIS2020", name: "Object Oriented Analysis & Design", credits: 4, type: "compulsory" },
+      { id: "NIS2030", name: "Business Process Modelling", credits: 4, type: "compulsory" },
+      { id: "NIS2040", name: "IS Analysis & Requirements Engineering", credits: 4, type: "compulsory" },
+      { id: "NIS2050", name: "Computing Infrastructure Design", credits: 4, type: "compulsory" },
+    ],
+    Y2S2: [
+      { id: "NIS2060", name: "Professional Skills", credits: 2, type: "compulsory" },
+      { id: "NIS2070", name: "IS Project", credits: 4, type: "compulsory" },
+      { id: "NIS2080", name: "Enterprise Systems Administration", credits: 4, type: "compulsory" },
+      { id: "NIS2090", name: "Advanced OO Analysis & Design", credits: 4, type: "compulsory" },
+      { id: "NIS2100", name: "Employability Seminar", credits: 1, type: "compulsory" },
+      { id: "NIS2110", name: "Probability & Statistics", credits: 3, type: "compulsory" },
+    ],
+    Y3S1: [
+      { id: "NIS3010", name: "IS Project Management", credits: 3, type: "compulsory" },
+      { id: "NIS3020", name: "Digital Business Strategy", credits: 3, type: "compulsory" },
+      { id: "NIS3030", name: "Enterprise Information Systems", credits: 4, type: "compulsory" },
+      { id: "NIS3040", name: "Data Analytics & Business Intelligence", credits: 4, type: "compulsory" },
+      { id: "NIS3050", name: "E-Commerce Architecture", credits: 4, type: "compulsory" },
+    ],
+    Y3S2: [
+      { id: "NIS3060", name: "Information Security Management", credits: 4, type: "compulsory" },
+      { id: "NIS3070", name: "Organisational Behaviour & Change Management", credits: 3, type: "compulsory" },
+      { id: "NIS3080", name: "ERP & Supply Chain Systems", credits: 4, type: "compulsory" },
+      { id: "NIS3090", name: "IS Strategic Management", credits: 3, type: "compulsory" },
+      { id: "NIS3100", name: "Industry Internship", credits: 8, type: "compulsory" },
+    ],
+    Y4S1: {
+      compulsory: [
+        { id: "NIS4010", name: "Research Project", credits: 16, type: "compulsory" },
+        { id: "NIS4020", name: "Preparation for the Professional World", credits: 2, type: "compulsory" },
+      ],
+      electivesPool: [
+        { id: "NIS4E10", name: "Information Assurance & Auditing", credits: 4, type: "elective" },
+        { id: "NIS4E20", name: "Human Resource Information Systems", credits: 4, type: "elective" },
+        { id: "NIS4E30", name: "Software Quality Assurance", credits: 4, type: "elective" },
+        { id: "NIS4E40", name: "Supply Chain Management Systems", credits: 4, type: "elective" },
+        { id: "NIS4E50", name: "Knowledge Management Systems", credits: 4, type: "elective" },
+        { id: "NIS4E60", name: "Human-Computer Interaction", credits: 4, type: "elective" },
+        { id: "NIS4E70", name: "Innovation & Digital Entrepreneurship", credits: 4, type: "elective" },
+      ],
+      requiredElectivesCount: 2,
+    },
+    Y4S2: {
+      compulsory: [
+        { id: "NIS4030", name: "Business Process Management", credits: 4, type: "compulsory" },
+        { id: "NIS4040", name: "Practicing Business Analyst", credits: 4, type: "compulsory" },
+        { id: "NIS4050", name: "IS Governance & Compliance", credits: 4, type: "compulsory" },
+      ],
+      electivesPool: [],
+      requiredElectivesCount: 0,
+    },
+  },
+};
+
+/**
+ * Returns the correct curriculum data object for the given syllabus.
+ * @param {'OLD'|'NEW'} syllabus
+ */
+export const getCurriculumData = (syllabus) =>
+  syllabus === 'NEW' ? newCurriculumData : curriculumData;
+
 export const SEMESTER_KEYS = [
   "Y1S1",
   "Y1S2",
@@ -1890,13 +2360,16 @@ export const isY4Semester = (semKey) => semKey.startsWith("Y4");
 /**
  * Returns all modules for a given semester (compulsory + chosen electives).
  * For Y4, pass selectedElectives = ['elective_id', ...] to merge them in.
+ * @param {'OLD'|'NEW'} syllabus - which curriculum to use (default 'OLD')
  */
 export const getModulesForSemester = (
   specialization,
   semKey,
   selectedElectiveIds = [],
+  syllabus = 'OLD',
 ) => {
-  const data = curriculumData[specialization]?.[semKey];
+  const dataset = getCurriculumData(syllabus);
+  const data = dataset[specialization]?.[semKey];
   if (!data) return [];
   if (Array.isArray(data)) return data;
 

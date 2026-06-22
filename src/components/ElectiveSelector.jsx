@@ -1,12 +1,12 @@
 'use client';
 
 import { useGpa } from '@/context/GpaContext';
-import { curriculumData } from '@/data/curriculum';
+import { getCurriculumData } from '@/data/curriculum';
 
 export default function ElectiveSelector({ semKey }) {
-  const { specialization, selectedElectives, setElectivesForSem } = useGpa();
+  const { specialization, syllabus, selectedElectives, setElectivesForSem } = useGpa();
 
-  const semData = curriculumData[specialization]?.[semKey];
+  const semData = getCurriculumData(syllabus)[specialization]?.[semKey];
   if (!semData || Array.isArray(semData) || !semData.electivesPool) return null;
 
   const { electivesPool, requiredElectivesCount } = semData;

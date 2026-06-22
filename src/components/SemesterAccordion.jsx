@@ -20,10 +20,10 @@ const YEAR_MAP = [
 ];
 
 function SemesterPanel({ semKey }) {
-  const { specialization, selectedElectives, semesterGPAs } = useGpa();
+  const { specialization, syllabus, selectedElectives, semesterGPAs } = useGpa();
   const gpa = semesterGPAs[semKey];
   const electives = selectedElectives[semKey] || [];
-  const modules = getModulesForSemester(specialization, semKey, electives);
+  const modules = getModulesForSemester(specialization, semKey, electives, syllabus);
   const isY4 = isY4Semester(semKey);
 
   return (
