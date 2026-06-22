@@ -1,6 +1,6 @@
 'use client';
 
-import { createContext, useContext, useState, useMemo, useCallback, useEffect } from 'react';
+import { createContext, useContext, useState, useMemo, useCallback, useEffect, useRef } from 'react';
 import { SPECIALIZATIONS, SEMESTER_KEYS } from '@/data/curriculum';
 import { deriveGpaData } from '@/lib/calculations';
 
@@ -37,24 +37,26 @@ function saveToStorage({ specialization, grades, selectedElectives }) {
 }
 
 export function GpaProvider({ children }) {
-  // Initialise from localStorage if available, otherwise use defaults
-  const [specialization, setSpecializationState] = useState(() => {
-    const saved = loadFromStorage();
-    return saved?.specialization ?? SPECIALIZATIONS[0].id;
-  });
+  // Start with deterministic defaults so server and client render the same markup.
+  const [specialization, setSpecializationState] = useState(SPECIALIZATIONS[0].id);
+  const [grades, setGrades] = useState(initialGrades);
+  const [selectedElectives, setSelectedElectives] = useState(initialElectives);
+  const hasHydratedRef = useRef(false);
 
-  const [grades, setGrades] = useState(() => {
-    const saved = loadFromStorage();
-    return saved?.grades ?? initialGrades();
-  });
-
-  const [selectedElectives, setSelectedElectives] = useState(() => {
-    const saved = loadFromStorage();
-    return saved?.selectedElectives ?? initialElectives();
-  });
-
-  // Persist to localStorage whenever state changes
+  // Rehydrate from localStorage after the first client render.
   useEffect(() => {
+    const saved = loadFromStorage();
+    if (saved) {
+      setSpecializationState(saved.specialization);
+      setGrades(saved.grades);
+      setSelectedElectives(saved.selectedElectives);
+    }
+    hasHydratedRef.current = true;
+  }, []);
+
+  // Persist only after hydration so the initial client render stays aligned with SSR.
+  useEffect(() => {
+    if (!hasHydratedRef.current) return;
     saveToStorage({ specialization, grades, selectedElectives });
   }, [specialization, grades, selectedElectives]);
 
