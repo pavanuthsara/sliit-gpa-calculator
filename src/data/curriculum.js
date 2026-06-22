@@ -10,6 +10,7 @@ export const SPECIALIZATIONS = [
   { id: "IM", label: "Interactive Media" },
   { id: "CSNE", label: "Computer Systems & Network Engineering" },
   { id: "CYBSEC", label: "Cyber Security" },
+  { id: "ISE", label: "Information Systems Engineering" },
 ];
 
 export const curriculumData = {
@@ -1322,6 +1323,283 @@ export const curriculumData = {
           type: "elective",
         }, // [cite: 321]
       ],
+      requiredElectivesCount: 0,
+    },
+  },
+
+  // ─────────────────────────────────────────────────────────────────
+  // INFORMATION SYSTEMS ENGINEERING (ISE)
+  // ─────────────────────────────────────────────────────────────────
+  ISE: {
+    Y1S1: [
+      {
+        id: "IT1010",
+        name: "Introduction to Programming",
+        credits: 4,
+        type: "compulsory",
+      }, //
+      {
+        id: "IT1020",
+        name: "Introduction to Computer Systems",
+        credits: 4,
+        type: "compulsory",
+      }, //
+      {
+        id: "IT1030",
+        name: "Mathematics for Computing",
+        credits: 4,
+        type: "compulsory",
+      }, //
+      {
+        id: "IT1040",
+        name: "Communication Skills",
+        credits: 3,
+        type: "compulsory",
+      }, //
+    ],
+    Y1S2: [
+      {
+        id: "IT1050",
+        name: "Object Oriented Concepts",
+        credits: 2,
+        type: "compulsory",
+      }, //
+      {
+        id: "IT1060",
+        name: "Software Process Modeling",
+        credits: 3,
+        type: "compulsory",
+      }, //
+      {
+        id: "IT1080",
+        name: "English for Academic Purposes",
+        credits: 3,
+        type: "compulsory",
+      }, //
+      {
+        id: "IT1090",
+        name: "Information Systems and Data Modeling",
+        credits: 4,
+        type: "compulsory",
+      }, //
+      {
+        id: "IT1100",
+        name: "Internet and Web Technologies",
+        credits: 4,
+        type: "compulsory",
+      }, //
+    ],
+    Y2S1: [
+      {
+        id: "IT2040",
+        name: "DataBase Management Systems",
+        credits: 4,
+        type: "compulsory",
+      }, //
+      {
+        id: "IE2021",
+        name: "Object Oriented Programming",
+        credits: 4,
+        type: "compulsory",
+      }, //
+      {
+        id: "IE2031",
+        name: "Structured Analysis and Design",
+        credits: 4,
+        type: "compulsory",
+      }, //
+      {
+        id: "IE2041",
+        name: "Information Systems Analysis",
+        credits: 4,
+        type: "compulsory",
+      }, //
+      {
+        id: "IE2071",
+        name: "Design and Management of Computing Infrastructure",
+        credits: 4,
+        type: "compulsory",
+      }, //
+    ],
+    Y2S2: [
+      {
+        id: "IT2090",
+        name: "Professional Skills",
+        credits: 2,
+        type: "compulsory",
+      }, //
+      {
+        id: "IE2051",
+        name: "Information Systems Project",
+        credits: 4,
+        type: "compulsory",
+      }, //
+      {
+        id: "IE2061",
+        name: "Operating Systems and Systems Administration",
+        credits: 4,
+        type: "compulsory",
+      }, //
+      {
+        id: "IE2081",
+        name: "Object Oriented Analysis and Design",
+        credits: 4,
+        type: "compulsory",
+      }, //
+      {
+        id: "IT2100",
+        name: "Employability Skills Development -Seminar",
+        credits: 1,
+        type: "compulsory",
+      }, //
+      {
+        id: "IT2110",
+        name: "Probability and Statistics",
+        credits: 3,
+        type: "compulsory",
+      }, //
+    ],
+    Y3S1: [
+      {
+        id: "IE3011",
+        name: "IS Project Management",
+        credits: 3,
+        type: "compulsory",
+      }, //
+      {
+        id: "IE3021",
+        name: "Organizational Business Functions I",
+        credits: 3,
+        type: "compulsory",
+      }, //
+      {
+        id: "IE3031",
+        name: "Management Information Systems",
+        credits: 3,
+        type: "compulsory",
+      }, //
+      {
+        id: "IE3041",
+        name: "Data Management and Business Intelligence",
+        credits: 4,
+        type: "compulsory",
+      }, //
+      {
+        id: "IE3051",
+        name: "E Business Strategy & Architecture and Design",
+        credits: 4,
+        type: "compulsory",
+      }, //
+    ],
+    Y3S2: [
+      {
+        id: "IE3061",
+        name: "Information Security Management",
+        credits: 4,
+        type: "compulsory",
+      }, //
+      {
+        id: "IE3071",
+        name: "Organizational Business Functions II",
+        credits: 3,
+        type: "compulsory",
+      }, //
+      {
+        id: "IE3081",
+        name: "Enterprise Resource Planning",
+        credits: 4,
+        type: "compulsory",
+      }, //
+      {
+        id: "IE3091",
+        name: "Information Systems Strategic Management",
+        credits: 3,
+        type: "compulsory",
+      }, //
+      {
+        id: "IT3110",
+        name: "Industry Placement",
+        credits: 8,
+        type: "compulsory",
+      }, //
+    ],
+    Y4S1: {
+      compulsory: [
+        {
+          id: "IT4010",
+          name: "Research Project",
+          credits: 16,
+          type: "compulsory",
+        }, //
+        {
+          id: "IT4070",
+          name: "Preparation for the Professional World",
+          credits: 2,
+          type: "compulsory",
+        }, //
+      ],
+      electivesPool: [
+        {
+          id: "IE4040",
+          name: "Information Assurance and Auditing",
+          credits: 4,
+          type: "elective",
+        }, //
+        {
+          id: "IE4151",
+          name: "Human Resource Information Systems",
+          credits: 4,
+          type: "elective",
+        }, //
+        {
+          id: "IT4100",
+          name: "Software Quality Asuarance",
+          credits: 4,
+          type: "elective",
+        }, //
+        {
+          id: "IE4081",
+          name: "Supply Chain Management",
+          credits: 4,
+          type: "elective",
+        }, //
+        {
+          id: "IT4120",
+          name: "Knowledge Management",
+          credits: 4,
+          type: "elective",
+        }, //
+        {
+          id: "IE4131",
+          name: "Human Computer Interaction",
+          credits: 4,
+          type: "elective",
+        }, //
+        {
+          id: "IT4050",
+          name: "Innovation Management and Entrepreneurship",
+          credits: 4,
+          type: "elective",
+        }, //
+      ],
+      requiredElectivesCount: 2, //
+    },
+    Y4S2: {
+      compulsory: [
+        {
+          id: "IE4011",
+          name: "Business Process Management",
+          credits: 4,
+          type: "compulsory",
+        }, //
+        {
+          id: "IE4071",
+          name: "Practicing Business Analyst",
+          credits: 4,
+          type: "compulsory",
+        }, //
+      ],
+      electivesPool: [],
       requiredElectivesCount: 0,
     },
   },
