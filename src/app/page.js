@@ -6,6 +6,7 @@ import SpecializationSelector from '@/components/SpecializationSelector';
 import SemesterAccordion from '@/components/SemesterAccordion';
 import WgpaDisplay from '@/components/WgpaDisplay';
 import PrintReport from '@/components/PrintReport';
+import VisitorCounter from '@/components/VisitorCounter';
 
 export default function HomePage() {
   const handlePrint = () => window.print();
@@ -25,12 +26,15 @@ export default function HomePage() {
 
           {/* Page heading */}
           <div className="mb-8 print:hidden">
-            <h2 className="text-3xl font-black text-white tracking-tight">
-              GPA &amp; WGPA{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-blue-400">
-                Calculator
-              </span>
-            </h2>
+            <div className="flex items-center gap-3 flex-wrap">
+              <h2 className="text-3xl font-black text-white tracking-tight">
+                GPA &amp; WGPA{' '}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-blue-400">
+                  Calculator
+                </span>
+              </h2>
+              <VisitorCounter />
+            </div>
             <p className="text-slate-400 mt-1 text-sm">
               Select your specialization, enter your grades, and your GPA &amp; WGPA update in real time.
             </p>
