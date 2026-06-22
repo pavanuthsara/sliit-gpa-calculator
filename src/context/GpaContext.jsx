@@ -1,6 +1,6 @@
 'use client';
 
-import { createContext, useContext, useState, useMemo, useCallback, useEffect } from 'react';
+import { createContext, useContext, useState, useMemo, useCallback, useEffect, useRef } from 'react';
 import { SPECIALIZATIONS, SEMESTER_KEYS } from '@/data/curriculum';
 import { deriveGpaData } from '@/lib/calculations';
 
@@ -28,40 +28,51 @@ function loadFromStorage() {
 }
 
 /** Persist current state to localStorage. */
-function saveToStorage({ specialization, grades, selectedElectives }) {
+function saveToStorage({ specialization, syllabus, grades, selectedElectives }) {
   try {
-    localStorage.setItem(LS_KEY, JSON.stringify({ specialization, grades, selectedElectives }));
+    localStorage.setItem(LS_KEY, JSON.stringify({ specialization, syllabus, grades, selectedElectives }));
   } catch {
     // Silently ignore (e.g., private browsing quota exceeded)
   }
 }
 
 export function GpaProvider({ children }) {
-  // Initialise from localStorage if available, otherwise use defaults
-  const [specialization, setSpecializationState] = useState(() => {
-    const saved = loadFromStorage();
-    return saved?.specialization ?? SPECIALIZATIONS[0].id;
-  });
+  // Start with deterministic defaults so server and client render the same markup.
+  const [specialization, setSpecializationState] = useState(SPECIALIZATIONS[0].id);
+  const [syllabus, setSyllabusState] = useState('OLD');
+  const [grades, setGrades] = useState(initialGrades);
+  const [selectedElectives, setSelectedElectives] = useState(initialElectives);
+  const hasHydratedRef = useRef(false);
 
-  const [grades, setGrades] = useState(() => {
-    const saved = loadFromStorage();
-    return saved?.grades ?? initialGrades();
-  });
-
-  const [selectedElectives, setSelectedElectives] = useState(() => {
-    const saved = loadFromStorage();
-    return saved?.selectedElectives ?? initialElectives();
-  });
-
-  // Persist to localStorage whenever state changes
+  // Rehydrate from localStorage after the first client render.
   useEffect(() => {
-    saveToStorage({ specialization, grades, selectedElectives });
-  }, [specialization, grades, selectedElectives]);
+    const saved = loadFromStorage();
+    if (saved) {
+      setSpecializationState(saved.specialization);
+      setSyllabusState(saved.syllabus ?? 'OLD');
+      setGrades(saved.grades);
+      setSelectedElectives(saved.selectedElectives);
+    }
+    hasHydratedRef.current = true;
+  }, []);
+
+  // Persist only after hydration so the initial client render stays aligned with SSR.
+  useEffect(() => {
+    if (!hasHydratedRef.current) return;
+    saveToStorage({ specialization, syllabus, grades, selectedElectives });
+  }, [specialization, syllabus, grades, selectedElectives]);
 
   // ─── Actions ─────────────────────────────────────────────────────
 
   const setSpecialization = useCallback((spec) => {
     setSpecializationState(spec);
+    setGrades(initialGrades());
+    setSelectedElectives(initialElectives());
+  }, []);
+
+  /** Switch syllabus and reset all entered grades / elective picks. */
+  const setSyllabus = useCallback((newSyllabus) => {
+    setSyllabusState(newSyllabus);
     setGrades(initialGrades());
     setSelectedElectives(initialElectives());
   }, []);
@@ -90,10 +101,11 @@ export function GpaProvider({ children }) {
 
   /**
    * Clear ALL data — resets state AND wipes localStorage.
-   * Specialization is reset to the default as well.
+   * Specialization and syllabus are reset to defaults as well.
    */
   const clearAll = useCallback(() => {
     setSpecializationState(SPECIALIZATIONS[0].id);
+    setSyllabusState('OLD');
     setGrades(initialGrades());
     setSelectedElectives(initialElectives());
     try { localStorage.removeItem(LS_KEY); } catch { /* ignore */ }
@@ -102,13 +114,15 @@ export function GpaProvider({ children }) {
   // ─── Derived computations ─────────────────────────────────────────
 
   const derived = useMemo(() =>
-    deriveGpaData({ specialization, grades, selectedElectives }),
-    [specialization, grades, selectedElectives]
+    deriveGpaData({ specialization, syllabus, grades, selectedElectives }),
+    [specialization, syllabus, grades, selectedElectives]
   );
 
   const value = {
     specialization,
     setSpecialization,
+    syllabus,
+    setSyllabus,
     grades,
     setGrade,
     selectedElectives,

@@ -59,14 +59,14 @@ export function calculateWGPA(yearGPAs) {
 /**
  * Derive all computed values from raw state.
  */
-export function deriveGpaData({ specialization, grades, selectedElectives }) {
+export function deriveGpaData({ specialization, syllabus = 'OLD', grades, selectedElectives }) {
   const semesterGPAs = {};
   const yearGPAs = {};
 
   for (const [year, sems] of Object.entries(YEAR_SEMESTER_MAP)) {
     for (const semKey of sems) {
       const electives = selectedElectives[semKey] || [];
-      const modules = getModulesForSemester(specialization, semKey, electives);
+      const modules = getModulesForSemester(specialization, semKey, electives, syllabus);
       semesterGPAs[semKey] = calculateSemesterGPA(modules, grades[semKey] || {});
     }
     const [s1, s2] = sems;
