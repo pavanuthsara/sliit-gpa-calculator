@@ -1,4 +1,5 @@
 import { Geist } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/next';
 import './globals.css';
 
 const geist = Geist({ subsets: ['latin'], variable: '--font-geist' });
@@ -20,6 +21,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${geist.variable} font-sans bg-slate-950 text-white antialiased min-h-screen`}>
         {children}
+        <Analytics />
       </body>
     </html>
   );
