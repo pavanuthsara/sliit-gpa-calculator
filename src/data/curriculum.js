@@ -49,7 +49,7 @@ export const curriculumData = {
       { id: "IT2080", name: "IT Project", credits: 4, type: "compulsory" }, //
       { id: "IT2090", name: "Professional Skills", credits: 2, type: "compulsory" }, //
       { id: "IT2110", name: "Probability and Statistics", credits: 3, type: "compulsory" }, //
-      { id: "IT2100", name: "Employability Skills Development-Seminar", credits: 1, type: "compulsory" }, //
+      // { id: "IT2100", name: "Employability Skills Development-Seminar", credits: 1, type: "compulsory" }, //
     ],
     Y3S1: [
       { id: "SE3010", name: "Software Engineering Process & Quality Management", credits: 4, type: "compulsory" }, //
@@ -120,7 +120,7 @@ export const curriculumData = {
       { id: "IT2070", name: "Data Structures and Algorithms", credits: 4, type: "compulsory" }, //
       { id: "IT2080", name: "IT Project", credits: 4, type: "compulsory" }, //
       { id: "IT2090", name: "Professional Skills", credits: 2, type: "compulsory" }, //
-      { id: "IT2100", name: "Employability Skills Development-Seminar", credits: 1, type: "compulsory" }, //
+      // { id: "IT2100", name: "Employability Skills Development-Seminar", credits: 1, type: "compulsory" }, //
       { id: "IT2110", name: "Probability and Statistics", credits: 3, type: "compulsory" }, //
     ],
     Y3S1: [
@@ -199,7 +199,7 @@ export const curriculumData = {
       { id: "IT2080", name: "IT Project", credits: 4, type: "compulsory" }, //
       { id: "IT2090", name: "Professional Skills", credits: 2, type: "compulsory" }, //
       { id: "IT2110", name: "Probability and Statistics", credits: 3, type: "compulsory" }, //
-      { id: "IT2100", name: "Employability Skills Development-Seminar", credits: 1, type: "compulsory" }, //
+      // { id: "IT2100", name: "Employability Skills Development-Seminar", credits: 1, type: "compulsory" }, //
     ],
     Y3S1: [
       { id: "IT3030", name: "Programming Applications and Frameworks", credits: 4, type: "compulsory" }, //
@@ -264,7 +264,7 @@ export const curriculumData = {
       { id: "IT2080", name: "IT Project", credits: 4, type: "compulsory" }, //
       { id: "IT2090", name: "Professional Skills", credits: 2, type: "compulsory" }, //
       { id: "IT2110", name: "Probability and Statistics", credits: 3, type: "compulsory" }, //
-      { id: "IT2100", name: "Employability Skills Development-Seminar", credits: 1, type: "compulsory" }, //
+      // { id: "IT2100", name: "Employability Skills Development-Seminar", credits: 1, type: "compulsory" }, //
     ],
     Y3S1: [
       { id: "SE3011", name: "Technical Evolution of Multimedia", credits: 4, type: "compulsory" }, //
@@ -344,7 +344,7 @@ export const curriculumData = {
       { id: "IE3070", name: "Network Technology Project", credits: 4, type: "compulsory" }, //
       { id: "IE3080", name: "Network Security Engineering", credits: 4, type: "compulsory" }, //
       { id: "IT3110", name: "Industry Placement", credits: 8, type: "compulsory" }, //
-      { id: "IT3050", name: "Employability Skills Development-Seminar", credits: 1, type: "compulsory" }, //
+      // { id: "IT3050", name: "Employability Skills Development-Seminar", credits: 1, type: "compulsory" }, //
     ],
     Y4S1: {
       compulsory: [
@@ -473,7 +473,7 @@ export const curriculumData = {
       { id: "IE2082", name: "Discrete Mathematics", credits: 4, type: "compulsory" }, //
       { id: "IE2072", name: "Foundations of Algorithms", credits: 4, type: "compulsory" }, //
       { id: "IT2090", name: "Professional Skills", credits: 2, type: "compulsory" }, //
-      { id: "IT2100", name: "Employability Skills Development-Seminar", credits: 1, type: "compulsory" }, //
+      // { id: "IT2100", name: "Employability Skills Development-Seminar", credits: 1, type: "compulsory" }, //
     ],
     Y3S1: [
       { id: "IE3112", name: "Mobile Security", credits: 4, type: "compulsory" }, //
